@@ -1,7 +1,9 @@
 from PIL import Image
+import sys
 
 def main():
-    image = Image.open("westbrook.jpg")
+    fname = sys.argv[1]
+    image = Image.open(fname)
     rgb_im = image.convert('RGB')
     width, height = rgb_im.size
     image_new = Image.new('RGB', (width, height))
